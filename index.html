@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A little surprise for you 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffe4ee;--bg2:#fff5f9;--pink:#e8307e;--ink:#2a1a22;--card:#fff;--line:#f7a8c8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#3b1a2a;--bg2:#2a1220;--ink:#2a1a22}}
+:root[data-theme="dark"]{--bg:#3b1a2a;--bg2:#2a1220;--ink:#2a1a22}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:Quicksand,system-ui,sans-serif;background:radial-gradient(circle at 50% 20%,var(--bg2),var(--bg));color:var(--ink);overflow:hidden;background-color:var(--bg)}
+.scr{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;opacity:0;transition:opacity .6s}
+.scr.on{display:flex}.scr.show{opacity:1}
+h1,h2{font-family:Pacifico,cursive;color:var(--pink);font-weight:400;margin:0 0 12px}
+h1{font-size:2.2rem}h2{font-size:1.9rem}
+p{margin:0 0 14px;line-height:1.5}
+input,button{font:inherit;border-radius:999px;border:2px solid var(--line);padding:14px 20px;font-size:1.05rem}
+input{width:min(280px,80vw);text-align:center;background:#fff;color:var(--ink);outline:none}
+input:focus{border-color:var(--pink)}
+button{background:var(--pink);color:#fff;border-color:var(--pink);font-weight:700;cursor:pointer;margin-top:12px}
+#err{color:var(--pink);min-height:1.4em;font-weight:700;margin-top:10px}
+.shake{animation:sh .4s}
+@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#bq{width:min(300px,72vw);transform:scale(.2);opacity:0;transition:transform 1.4s cubic-bezier(.2,1.4,.4,1),opacity .8s}
+#bq.bloom{transform:scale(1);opacity:1}
+.fade{opacity:0;transition:opacity 1s 1s}.fade.in{opacity:1}
+#cat{position:absolute;bottom:34%;left:-170px;width:150px;animation:run 2.3s ease-out forwards}
+@keyframes run{to{left:calc(50% - 75px)}}
+#cat svg{animation:hop .28s infinite alternate ease-in-out}
+#cat.stop svg{animation:none}
+@keyframes hop{to{transform:translateY(-8px)}}
+.leg{transform-box:fill-box;transform-origin:top center;animation:leg .28s infinite alternate}
+.leg.b{animation-direction:alternate-reverse}
+#cat.stop .leg{animation:none}
+@keyframes leg{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
+#tail{transform-box:fill-box;transform-origin:left bottom;animation:tail .5s infinite alternate}
+@keyframes tail{to{transform:rotate(18deg)}}
+#go{position:absolute;bottom:18%;opacity:0;pointer-events:none;transition:opacity .5s}
+#go.in{opacity:1;pointer-events:auto;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.card{background:var(--card);border:3px solid var(--line);border-radius:28px;padding:30px 24px;width:min(340px,82vw);box-shadow:0 10px 30px rgba(232,48,126,.2);position:relative;z-index:2}
+.card p{color:var(--ink)}.card .pk{color:var(--pink);font-weight:700}
+.st{position:absolute;width:84px;z-index:1}
+.st.tl{top:calc(10px + env(safe-area-inset-top,0px));left:8px;transform:rotate(-18deg)}
+.st.tr{top:calc(10px + env(safe-area-inset-top,0px));right:8px;transform:rotate(18deg) scaleX(-1)}
+.st.bl{bottom:calc(10px + env(safe-area-inset-bottom,0px));left:8px;transform:rotate(14deg)}
+.st.br{bottom:calc(10px + env(safe-area-inset-bottom,0px));right:8px;transform:rotate(-14deg) scaleX(-1)}
+@media (prefers-reduced-motion:reduce){#cat,#cat svg,.leg,#tail,#go{animation:none!important}#cat{left:calc(50% - 75px)}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<g id="rs"><circle r="17" fill="#f7a1c2"/><circle r="13" fill="#ee6c9c"/><circle r="8" fill="#e8307e"/><path d="M-6 0Q0-8 6 0Q0 6-4 3" fill="none" stroke="#fff" stroke-width="1.8" opacity=".7"/><path d="M-14-4Q-8-12 0-13" fill="none" stroke="#fff" stroke-width="1.5" opacity=".5"/></g>
+<g id="ly"><g fill="#fff" stroke="#f4a6c0" stroke-width="1.2"><ellipse cy="-11" rx="5.5" ry="12" transform="rotate(0)"/><ellipse cy="-11" rx="5.5" ry="12" transform="rotate(60)"/><ellipse cy="-11" rx="5.5" ry="12" transform="rotate(120)"/><ellipse cy="-11" rx="5.5" ry="12" transform="rotate(180)"/><ellipse cy="-11" rx="5.5" ry="12" transform="rotate(240)"/><ellipse cy="-11" rx="5.5" ry="12" transform="rotate(300)"/></g><circle r="4" fill="#ffb3cc"/><circle cx="-6" cy="-2" r="1.4" fill="#e8307e"/><circle cx="5" cy="-4" r="1.4" fill="#e8307e"/><circle cx="1" cy="6" r="1.4" fill="#e8307e"/></g>
+<g id="tp"><path d="M-12-14Q-13 11 0 15Q13 11 12-14L6-6L0-18L-6-6Z" fill="#f48fb1"/><path d="M0-18L-3 10M0-18L3 10" stroke="#ec6c9a" stroke-width="1.2" fill="none"/></g>
+<g id="dz"><g fill="#fff" stroke="#f4a6c0" stroke-width=".8"><ellipse cy="-7" rx="2.8" ry="6" transform="rotate(0)"/><ellipse cy="-7" rx="2.8" ry="6" transform="rotate(60)"/><ellipse cy="-7" rx="2.8" ry="6" transform="rotate(120)"/><ellipse cy="-7" rx="2.8" ry="6" transform="rotate(180)"/><ellipse cy="-7" rx="2.8" ry="6" transform="rotate(240)"/><ellipse cy="-7" rx="2.8" ry="6" transform="rotate(300)"/></g><circle r="3" fill="#ffe08a"/></g>
+<symbol id="b" viewBox="0 0 200 240">
+ <path d="M100 172L100 40M100 172L62 56M100 172L138 56M100 172L38 94M100 172L72 84M100 172L101 80M100 172L130 86M100 172L162 94M100 172L58 118M100 172L100 110M100 172L142 118" stroke="#7bbf8a" stroke-width="4" stroke-linecap="round" fill="none"/>
+ <g fill="#9bd3a8"><path d="M100 150Q60 140 46 112Q80 112 100 150Z"/><path d="M100 150Q140 140 154 112Q120 112 100 150Z"/><path d="M84 62Q70 40 56 36Q60 56 84 62Z"/><path d="M116 62Q130 40 144 36Q140 56 116 62Z"/><path d="M90 130Q60 128 34 134Q60 148 90 130Z"/><path d="M110 130Q140 128 166 134Q140 148 110 130Z"/></g>
+ <use href="#tp" transform="translate(62 56) rotate(-12)"/><use href="#tp" transform="translate(138 56) rotate(12)"/>
+ <use href="#rs" transform="translate(100 40) scale(1.1)"/>
+ <g fill="#fff" stroke="#f4a6c0" stroke-width="1"><circle cx="20" cy="70" r="2.6"/><circle cx="180" cy="70" r="2.6"/><circle cx="30" cy="122" r="2.6"/><circle cx="172" cy="122" r="2.6"/><circle cx="52" cy="28" r="2.6"/><circle cx="148" cy="28" r="2.6"/><circle cx="88" cy="16" r="2.6"/><circle cx="114" cy="18" r="2.6"/><circle cx="16" cy="98" r="2.6"/><circle cx="184" cy="102" r="2.6"/><circle cx="44" cy="66" r="2.6"/><circle cx="156" cy="64" r="2.6"/></g>
+ <use href="#ly" transform="translate(38 94) rotate(-10) scale(1.15)"/><use href="#ly" transform="translate(162 94) rotate(15) scale(1.15)"/>
+ <use href="#rs" transform="translate(72 84)"/><use href="#rs" transform="translate(130 86) scale(.95)"/><use href="#rs" transform="translate(101 80)"/>
+ <use href="#dz" transform="translate(58 118)"/><use href="#dz" transform="translate(100 110)"/><use href="#dz" transform="translate(142 118)"/>
+ <path d="M44 132L156 132L124 234L76 234Z" fill="#fff" stroke="#f7a8c8" stroke-width="3"/>
+ <path d="M44 132L100 160L156 132L124 234L76 234Z" fill="#fbc3d9" stroke="#f7a8c8" stroke-width="3"/>
+ <g fill="#fff" opacity=".8"><circle cx="90" cy="190" r="3"/><circle cx="110" cy="205" r="3"/><circle cx="100" cy="176" r="2.5"/><circle cx="96" cy="218" r="2.5"/></g>
+ <path d="M100 160L64 142L70 176Z M100 160L136 142L130 176Z" fill="#e8307e"/><path d="M96 166L84 202L94 195L98 206Z M104 166L116 202L106 195L102 206Z" fill="#e8307e"/><circle cx="100" cy="160" r="7" fill="#c2185b"/>
+</symbol>
+</defs>
+</svg>
+
+<section id="s1" class="scr on show">
+ <h1>For you 💌</h1>
+ <p>Type the secret word to open</p>
+ <input id="pw" type="password" placeholder="Password" autocomplete="off" aria-label="Password">
+ <button id="open">Open 🔓</button>
+ <div id="err" role="alert"></div>
+</section>
+
+<section id="s2" class="scr">
+ <svg id="bq" viewBox="0 0 200 240"><use href="#b"/></svg>
+ <h2 class="fade">Congrats! 🎉</h2>
+ <p class="fade">Wishing you the happiest birthday 🌹🤍🌷</p>
+</section>
+
+<section id="s3" class="scr">
+ <div id="cat">
+  <svg viewBox="0 0 150 120">
+   <path id="tail" d="M28 70 Q4 60 10 34" stroke="#f9b7cf" stroke-width="9" fill="none" stroke-linecap="round"/>
+   <rect class="leg b" x="38" y="86" width="10" height="26" rx="5" fill="#f9b7cf"/>
+   <rect class="leg" x="52" y="86" width="10" height="26" rx="5" fill="#f9b7cf"/>
+   <rect class="leg" x="86" y="86" width="10" height="26" rx="5" fill="#f9b7cf"/>
+   <rect class="leg b" x="100" y="86" width="10" height="26" rx="5" fill="#f9b7cf"/>
+   <ellipse cx="70" cy="76" rx="44" ry="26" fill="#ffd3e3"/>
+   <path d="M98 36 L102 12 L116 30Z M128 36 L132 12 L144 32Z" fill="#ffd3e3" stroke="#f9b7cf" stroke-width="2"/>
+   <circle cx="116" cy="52" r="28" fill="#ffd3e3"/>
+   <circle cx="107" cy="50" r="3.5" fill="#2a1a22"/><circle cx="127" cy="50" r="3.5" fill="#2a1a22"/>
+   <circle cx="100" cy="60" r="5" fill="#ff9fc0" opacity=".7"/><circle cx="134" cy="60" r="5" fill="#ff9fc0" opacity=".7"/>
+   <path d="M113 58 L120 58 L116.500 63Z" fill="#e8307e"/>
+   <path d="M116 63 Q111 69 106 65 M116 63 Q121 69 126 65" stroke="#2a1a22" stroke-width="1.6" fill="none"/>
+   <path d="M92 58 L76 55 M92 63 L76 66 M140 58 L152 55 M140 63 L152 66" stroke="#2a1a22" stroke-width="1.2"/>
+  </svg>
+ </div>
+ <button id="go">Click here 💗</button>
+</section>
+
+<section id="s4" class="scr">
+ <svg class="st tl" viewBox="0 0 200 240"><use href="#b"/></svg>
+ <svg class="st tr" viewBox="0 0 200 240"><use href="#b"/></svg>
+ <svg class="st bl" viewBox="0 0 200 240"><use href="#b"/></svg>
+ <svg class="st br" viewBox="0 0 200 240"><use href="#b"/></svg>
+ <div class="card">
+  <h2 id="hb">Happy Birthday!</h2>
+  <p>Wishing you a day full of love, laughter, cake and everything pink 🎂</p>
+  <p>May this year be your sweetest one yet. You deserve all the happiness in the world.</p>
+  <p class="pk">With love 💕</p>
+ </div>
+</section>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var to=(new URLSearchParams(location.search).get('to')||'Pookie').slice(0,30);
+$('hb').textContent='Happy Birthday, '+to+'!';
+function show(id,cb){
+ var cur=document.querySelector('.scr.on');
+ cur.classList.remove('show');
+ setTimeout(function(){
+  cur.classList.remove('on');
+  var n=$(id);n.classList.add('on');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){n.classList.add('show');if(cb)cb()})});
+ },600);
+}
+function tryOpen(){
+ if($('pw').value.trim().toUpperCase()==='POOKIE'){
+  show('s2',function(){
+   $('bq').classList.add('bloom');
+   document.querySelectorAll('#s2 .fade').forEach(function(e){e.classList.add('in')});
+   setTimeout(function(){show('s3',runCat)},4800);
+  });
+ }else{
+  $('err').textContent='Wrong password, try again 💭';
+  $('pw').classList.remove('shake');void $('pw').offsetWidth;$('pw').classList.add('shake');
+ }
+}
+function runCat(){
+ var c=$('cat');
+ var done=function(){c.classList.add('stop');$('go').classList.add('in')};
+ c.addEventListener('animationend',function(e){if(e.animationName==='run')done()});
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches)done();
+}
+$('open').onclick=tryOpen;
+$('pw').addEventListener('keydown',function(e){if(e.key==='Enter')tryOpen()});
+$('go').onclick=function(){show('s4')};
+})();
+</script>
+</body>
+</html>
